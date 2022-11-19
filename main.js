@@ -1,4 +1,3 @@
-const inputText = document.querySelectorAll('[type="text"]');
 const inputPhone = document.querySelector('[type="tel"]');
 const form = document.querySelector('form');
 const check = document.querySelector("[type='checkbox']");
@@ -50,12 +49,6 @@ element.addEventListener('input', function (event) {
     elems.addEventListener("focus", mask);
     elems.addEventListener("blur", mask);
   }
-
-  inputText.forEach((item) => {
-    item.addEventListener('input', (e) =>{
-e.target.value = e.target.value.match(/[а-яА-Я-a-zA-Z ]*/);
-    })
-  });
 
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
